@@ -1,0 +1,342 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830395ac84394624bb914382582327fd, type: 3}
+  m_Name: ItemStorage
+  m_EditorClassIdentifier: 
+  _itemSquarePrefab: {fileID: -5388961631974840438, guid: 61c3c9798756ebb48873563455b5eccd, type: 3}
+  _itemCirclePrefab: {fileID: 7710375028134028024, guid: 07376ea1f8c8c7b4b948176d5b2ffa6b, type: 3}
+  _itemTrianglePrefab: {fileID: -7868577273303500748, guid: 93327d1038f25784bb498c3a787965a5, type: 3}
+  _items:
+  - _type: 0
+    _color: {r: 0.9056604, g: 0.43147027, b: 0.43147027, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.9056604, g: 0.43147027, b: 0.43147027, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.9056604, g: 0.43147027, b: 0.43147027, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.43137258, g: 0.90588236, b: 0.50778925, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.43137258, g: 0.90588236, b: 0.50778925, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.43137258, g: 0.90588236, b: 0.50778925, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.71037364, g: 0.43137258, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.71037364, g: 0.43137258, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.71037364, g: 0.43137258, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 0
+    _color: {r: 0.71037364, g: 0.43137258, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.71037364, g: 0.43137258, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.71037364, g: 0.43137258, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.90588236, g: 0.43137258, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.90588236, g: 0.43137258, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.90588236, g: 0.43137258, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 0
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 0
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 0
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 0
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 0
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 0
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 0
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 0
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 0
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 3
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.43137255, g: 0.90588236, b: 0.5058824, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.70980394, g: 0.43137255, b: 0.90588236, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 0
+    _image: {fileID: 21300000, guid: 846f4adabdb070449a0bde0c55f1b0db, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 1
+    _image: {fileID: 21300000, guid: 199cc933841d0fe47950aebc33d9e272, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}
+  - _type: 1
+    _color: {r: 0.90588236, g: 0.43137255, b: 0.43137255, a: 1}
+    _imageId: 2
+    _image: {fileID: 21300000, guid: e5538c6a4afb4f74698e9879f7d91a00, type: 3}

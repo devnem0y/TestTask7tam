@@ -12,36 +12,29 @@
             }
 
             #region Open
-
-            /// <summary>
-            /// Поднимает виджет с моделью IExample
-            /// </summary>
-            public void OpenViewExample(IExample example)
+            
+            public void OpenViewGameplay(ILevel level)
             {
-                _uiRoot.Create(nameof(WExample), example);
+                _uiRoot.Create(nameof(PGameplay), level);
             }
             
-            /// <summary>
-            /// Поднимает пустой виджет (без модели)
-            /// Для этого используем данную конструкцию (IEmptyWidget, модель null)
-            /// </summary>
-            public void OpenViewExampleEmpty()
+            public void OpenViewMain()
             {
-                _uiRoot.Create<IEmptyWidget>(nameof(WExampleEmpty), null);
+                _uiRoot.Create<IEmptyWidget>(nameof(PMain), null);
+            }
+            
+            public void OpenViewLoseWin()
+            {
+                _uiRoot.Create<IEmptyWidget>(nameof(WLoseWin), null);
             }
 
             #endregion
-
-            //TODO: Методы Close могут понадобиться для принудительного закрытия виджета, либо если виджет не имеет кнопки закрыть.
-            //TODO: Его можно закрыть и уничтожить из любого места.
+            
             #region Close
-
-            /// <summary>
-            /// Уничтожает виджет с моделью IExample
-            /// </summary>
-            public void CloseViewExample()
+            
+            public void CloseViewGameplay()
             {
-                _uiRoot.Kill(nameof(WExample));
+                _uiRoot.Kill(nameof(PGameplay));
             }
 
             #endregion
