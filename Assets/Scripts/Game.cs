@@ -35,7 +35,7 @@ public class Game : MonoBehaviour
                 break;
             case GameState.PLAY:
                 _level = Instantiate(_levelPrefab);
-                _uIManager.OpenViewGameplay(_level);
+                _level.Init(() => { _uIManager.OpenViewGameplay(_level); });
                 break;
             case GameState.VICTORY:
             case GameState.DEFEAT:

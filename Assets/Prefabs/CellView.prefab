@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4912426117875916260}
   - component: {fileID: 249429145614662318}
   - component: {fileID: 8572174633360629536}
-  - component: {fileID: -4850525827698548318}
+  - component: {fileID: -3593365152353176948}
   m_Layer: 0
-  m_Name: CellSquare
+  m_Name: CellView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 86df82c5d7b0e1541bf623a113b31570, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: d64bc6cff5bae1e428b7454c01b14b33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-4850525827698548318
+--- !u!114 &-3593365152353176948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,4 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c8934b2e87aa8147a17d8ef7286d47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 0
+  _image: {fileID: 8572174633360629536}
+  _sprites:
+  - {fileID: 7482667652216324306, guid: 86df82c5d7b0e1541bf623a113b31570, type: 3}
+  - {fileID: -2413806693520163455, guid: d64bc6cff5bae1e428b7454c01b14b33, type: 3}
+  - {fileID: 7482667652216324306, guid: d4104e06af9d68945af2b021917df61a, type: 3}
