@@ -6,6 +6,7 @@ public class CellView : MonoBehaviour
 {
     [SerializeField] private Image _image;
     [SerializeField] private List<Sprite> _sprites;
+    [SerializeField] private ItemView _itemViewPrefab;
     
     public int Id { get; private set; }
     
@@ -20,6 +21,12 @@ public class CellView : MonoBehaviour
             ItemType.TRIANGLE => _sprites[2],
             _ => _image.sprite
         };
+    }
+
+    public void AddItem(ItemData itemData, Vector3 startPosition)
+    {
+        var item = Instantiate(_itemViewPrefab, startPosition, Quaternion.identity, transform);
+        item.Init(itemData, transform.position);
     }
 
     public void Clear()

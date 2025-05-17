@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Item : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Item : MonoBehaviour
     
     private ItemData _itemData;
     public ItemData ItemData => _itemData;
+    
+    public event Action<Item, Vector3> Selected;
 
     public void Init(string id, ItemData itemData)
     {
@@ -21,6 +24,6 @@ public class Item : MonoBehaviour
 
     public void OnMouseDown()
     {
-        print($"Clicked {_id}");
+        Selected?.Invoke(this, Input.mousePosition);
     }
 }

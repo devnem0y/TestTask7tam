@@ -11,7 +11,8 @@ public class Level : MonoBehaviour, ILevel
     
     private Bar _bar;
     public IBar Bar => _bar;
-    
+    public event Action<int, ItemData, Vector3> AddItem;
+
     private List<ItemData> _itemsData;
 
     public void Init(Action action)
@@ -45,11 +46,27 @@ public class Level : MonoBehaviour, ILevel
                 _ => null
             };
 
-            if (item != null) item.Init(i.ToString(), firstItem);
+            if (item != null)
+            {
+                item.Init(i.ToString(), firstItem);
+                item.Selected += OnItemSelected;
+            }
             
             _itemsData.RemoveAt(0);
             
             yield return new WaitForSeconds(0.27f);
+        }
+    }
+
+    private void OnItemSelected(Item item, Vector3 selectPosition)
+    {
+        var cell = _bar.GetEmptyCellByType(item.ItemData.Type);
+
+        if (cell != null)
+        {
+            cell.SetItem(item.ItemData);
+            AddItem?.Invoke(cell.Id, item.ItemData, selectPosition);
+            Destroy(item.gameObject);
         }
     }
 

@@ -93,3 +93,4 @@ MonoBehaviour:
   - {fileID: 7482667652216324306, guid: 86df82c5d7b0e1541bf623a113b31570, type: 3}
   - {fileID: -2413806693520163455, guid: d64bc6cff5bae1e428b7454c01b14b33, type: 3}
   - {fileID: 7482667652216324306, guid: d4104e06af9d68945af2b021917df61a, type: 3}
+  _itemViewPrefab: {fileID: 3211313720456189002, guid: 35b401c3bfaad064ab06d42b5f0d77ea, type: 3}

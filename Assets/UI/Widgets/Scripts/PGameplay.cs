@@ -10,5 +10,17 @@ public class PGameplay : Widget<ILevel>
         base.Init(model);
         
         _barView.Init(Model.Bar);
+        
+        Model.AddItem += OnAddItem;
+    }
+
+    private void OnAddItem(int cellId, ItemData itemData, Vector3 pos)
+    {
+        _barView.GetCellById(cellId).AddItem(itemData, pos);
+    }
+
+    private void OnDestroy()
+    {
+        Model.AddItem -= OnAddItem;
     }
 }

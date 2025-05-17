@@ -1,4 +1,9 @@
-﻿public interface ILevel
+﻿using System;
+using UnityEngine;
+
+public interface ILevel
 {
     IBar Bar { get; }
+
+    event Action<int, ItemData, Vector3> AddItem;
 }
