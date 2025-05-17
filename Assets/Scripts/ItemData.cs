@@ -14,4 +14,7 @@ public class ItemData
     
     [SerializeField] private Sprite _image;
     public Sprite Image => _image;
+    
+    [SerializeField] private string _key;
+    public string Key => _key;
 }

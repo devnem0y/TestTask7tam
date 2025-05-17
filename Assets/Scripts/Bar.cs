@@ -42,4 +42,9 @@ public class Bar : IBar
     {
         return _cells.FirstOrDefault(cell => cell.Type == type && cell.IsEmpty);
     }
+    
+    public List<Cell> GetCellsByKey(string key)
+    {
+        return _cells.Where(cell => cell.ItemData?.Key == key).ToList();
+    }
 }

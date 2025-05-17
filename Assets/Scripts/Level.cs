@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Level : MonoBehaviour, ILevel
@@ -12,6 +13,7 @@ public class Level : MonoBehaviour, ILevel
     private Bar _bar;
     public IBar Bar => _bar;
     public event Action<int, ItemData, Vector3> AddItem;
+    public event Action<int> RemoveItem;
 
     private List<ItemData> _itemsData;
 
@@ -62,11 +64,36 @@ public class Level : MonoBehaviour, ILevel
     {
         var cell = _bar.GetEmptyCellByType(item.ItemData.Type);
 
-        if (cell != null)
+        if (cell == null) return;
+        
+        cell.SetItem(item.ItemData);
+        AddItem?.Invoke(cell.Id, item.ItemData, selectPosition);
+        Destroy(item.gameObject);
+            
+        Invoke(nameof(CheckingForMatch), 1.17f);
+    }
+
+    public void CheckingForMatch()
+    {
+        var tmpCells = new List<Cell>();
+        
+        for (var i = 0; i < _bar.Length; i++)
         {
-            cell.SetItem(item.ItemData);
-            AddItem?.Invoke(cell.Id, item.ItemData, selectPosition);
-            Destroy(item.gameObject);
+            var cell = _bar.GetCellByIndex(i);
+            if (!cell.IsEmpty) tmpCells.Add((Cell)cell);
+        }
+
+        if (tmpCells.Count < 3) return;
+        
+        var cells = new List<Cell>();
+
+        foreach (var list in tmpCells.Select(tmpCell => _bar.GetCellsByKey(tmpCell.ItemData.Key)).
+                     Where(list => list.Count >= 3)) cells = new List<Cell>(list);
+            
+        foreach (var tmpCell in cells)
+        {
+            _bar.GetCellById(tmpCell.Id).Clear();
+            RemoveItem?.Invoke(tmpCell.Id);
         }
     }
 

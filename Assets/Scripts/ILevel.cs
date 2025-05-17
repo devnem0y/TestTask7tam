@@ -6,4 +6,7 @@ public interface ILevel
     IBar Bar { get; }
 
     event Action<int, ItemData, Vector3> AddItem;
+    event Action<int> RemoveItem;
+
+    void CheckingForMatch();
 }
