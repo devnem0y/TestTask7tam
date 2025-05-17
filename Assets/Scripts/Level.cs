@@ -14,26 +14,33 @@ public class Level : MonoBehaviour, ILevel
     public IBar Bar => _bar;
     public event Action<int, ItemData, Vector3> AddItem;
     public event Action<int> RemoveItem;
+    public event Action<bool> Begin;
 
     private List<ItemData> _itemsData;
+    private List<Item> _fieldItems;
+    
+    private int _refreshNumber;
+    private bool _isBegin;
 
     public void Init(Action action)
     {
         _bar = new Bar();
-        
-        _itemsData = new List<ItemData>(_itemStorage.Items);
-        MyTools.Shuffle(_itemsData);
-
-        StartCoroutine(GenerateItems());
-        
+        _fieldItems = new List<Item>();
+        Begin?.Invoke(_isBegin);
+        StartCoroutine(GenerateItems(_itemStorage.Items));
         action.Invoke();
     }
 
-    private IEnumerator  GenerateItems()
+    private IEnumerator GenerateItems(ICollection<ItemData> items)
     {
-        var spawnPosition = _spawnPoint.position;
+        _itemsData = new List<ItemData>(items);
         
-        for (var i = 0; i < _itemStorage.Items.Count; i++)
+        MyTools.Shuffle(_itemsData);
+        
+        var spawnPosition = _spawnPoint.position;
+        var count = items.Count;
+        
+        for (var i = 0; i < count; i++)
         {
             var firstItem = _itemsData[0];
             
@@ -50,24 +57,31 @@ public class Level : MonoBehaviour, ILevel
 
             if (item != null)
             {
-                item.Init(i.ToString(), firstItem);
+                item.Init($"{_refreshNumber}_{i}", firstItem);
                 item.Selected += OnItemSelected;
             }
             
+            _fieldItems.Add(item);
             _itemsData.RemoveAt(0);
             
             yield return new WaitForSeconds(0.27f);
         }
+
+        _isBegin = true;
+        Begin?.Invoke(_isBegin);
     }
 
     private void OnItemSelected(Item item, Vector3 selectPosition)
     {
+        if (!_isBegin) return;
+        
         var cell = _bar.GetEmptyCellByType(item.ItemData.Type);
 
         if (cell == null) return;
         
         cell.SetItem(item.ItemData);
         AddItem?.Invoke(cell.Id, item.ItemData, selectPosition);
+        _fieldItems.Remove(item);
         Destroy(item.gameObject);
             
         Invoke(nameof(CheckingForMatch), 1.17f);
@@ -95,6 +109,19 @@ public class Level : MonoBehaviour, ILevel
             _bar.GetCellById(tmpCell.Id).Clear();
             RemoveItem?.Invoke(tmpCell.Id);
         }
+        
+        if (_fieldItems.Count <= 0) Game.Instance.ChangeState(GameState.VICTORY);
+        if (_bar.IsFull()) Game.Instance.ChangeState(GameState.DEFEAT);
+    }
+
+    public void Refresh()
+    {
+        _isBegin = false;
+        Begin?.Invoke(_isBegin);
+        var itemsData = _fieldItems.Select(fieldItem => fieldItem.ItemData).ToList();
+        _fieldItems.Clear();
+        foreach (Transform child in _itemsParent) Destroy(child.gameObject);
+        StartCoroutine(GenerateItems(itemsData));
     }
 
     private void OnDestroy()

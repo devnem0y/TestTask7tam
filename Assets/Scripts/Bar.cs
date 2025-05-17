@@ -32,11 +32,6 @@ public class Bar : IBar
     {
         return _cells.Find(cell => cell.Id == id);
     }
-
-    public Cell GetCellByType(ItemType type)
-    {
-        return _cells.Find(cell => cell.Type == type);
-    }
     
     public Cell GetEmptyCellByType(ItemType type)
     {
@@ -46,5 +41,10 @@ public class Bar : IBar
     public List<Cell> GetCellsByKey(string key)
     {
         return _cells.Where(cell => cell.ItemData?.Key == key).ToList();
+    }
+
+    public bool IsFull()
+    {
+        return _cells.All(cell => !cell.IsEmpty);
     }
 }

@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UralHedgehog.UI;
 
 public class PGameplay : Widget<ILevel>
 {
     [SerializeField] private BarView _barView;
+    [SerializeField] private Button _btnRefresh;
     
     public override void Init(ILevel model)
     {
@@ -13,6 +15,9 @@ public class PGameplay : Widget<ILevel>
         
         Model.AddItem += OnAddItem;
         Model.RemoveItem += OnRemoveItem;
+
+        Model.Begin += value => { _btnRefresh.interactable = value; };
+        _btnRefresh.onClick.AddListener(() => Model.Refresh());
     }
 
     private void OnAddItem(int cellId, ItemData itemData, Vector3 pos)
