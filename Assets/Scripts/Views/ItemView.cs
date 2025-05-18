@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ItemView : MonoBehaviour
 {
-    private const float SPEED = 720f;
+    private const float SPEED = 2250f;
     
     [SerializeField] private Image _sprite;
     [SerializeField] private Image _image;
