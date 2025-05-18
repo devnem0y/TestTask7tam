@@ -8,7 +8,6 @@ public interface ILevel
     event Action<int, ItemData, Vector3> AddItem;
     event Action<int> RemoveItem;
     event Action<bool> Begin;
-
-    void CheckingForMatch();
+    
     void Refresh();
 }

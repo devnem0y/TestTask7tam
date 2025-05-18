@@ -57,7 +57,7 @@ public class Level : MonoBehaviour, ILevel
 
             if (item != null)
             {
-                item.Init($"{_refreshNumber}_{i}", firstItem);
+                item.Init(firstItem);
                 item.Selected += OnItemSelected;
             }
             
@@ -84,10 +84,10 @@ public class Level : MonoBehaviour, ILevel
         _fieldItems.Remove(item);
         Destroy(item.gameObject);
             
-        Invoke(nameof(CheckingForMatch), 1.17f);
+        Invoke(nameof(CheckingForMatch), 1.17f); //TODO: Для тестового пойдет, но можно сделать лучше
     }
 
-    public void CheckingForMatch()
+    private void CheckingForMatch()
     {
         var tmpCells = new List<Cell>();
         
